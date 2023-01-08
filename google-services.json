@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "118934681710",
+    "project_id": "druzhbasport",
+    "storage_bucket": "druzhbasport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118934681710:android:0466ca815f66cd4b960e7f",
+        "android_client_info": {
+          "package_name": "com.company.druzhbasport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118934681710-dkv57e064behptc84s572r57cfm5r9q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQCrltkxzb_ZVDMiafD_YvYTJXRlQHtSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118934681710-dkv57e064behptc84s572r57cfm5r9q3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "118934681710-q87pluija2qn4gj0sh8obent5nj9f1h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.company.druzhbasport"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
