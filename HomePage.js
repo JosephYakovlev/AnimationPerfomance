@@ -17,24 +17,14 @@ import { PanGestureHandler } from 'react-native-gesture-handler';
     }
 
 export const HomePage = () => {
-    
     const navigation = useNavigation()
-
     const {state, signin} = useContext(AuthContext) 
-
     const dimensions = useWindowDimensions()
-
-
     const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity)
-
     const marginsphere = useSharedValue(-300)
-
     const top = useSharedValue(0)
-
     const opacity = useSharedValue(1)
-
     const angle = useSharedValue(0)
-
     
     const gestureHandler = useAnimatedGestureHandler({
         onStart(_, context) {
@@ -118,12 +108,6 @@ export const HomePage = () => {
    const [accessToken, setAcessToken] = useState('')
    const [request, response, promtAsync] = Google.useAuthRequest(config) 
 
-    // useEffect(() => {
-    //     if(response?.type === 'success') {
-    //         setAcessToken(response.authentication.accessToken)
-    //         accessToken && state.user === null && fetchUserInfo()
-    //     }
-    // },[response,accessToken])
 
     async function fetchUserInfo() {
         let response = await fetch("https://www.googleapis.com/userinfo/v2/me",{
@@ -140,9 +124,6 @@ export const HomePage = () => {
     }
 
 
-
-  
-
   console.log('MAIN')
   return (
     <View style={{ flex: 1 }}
@@ -152,33 +133,22 @@ export const HomePage = () => {
         >
             <Animated.View 
                 style={[
-                    { 
-                        width: '100%', 
-                        top: 0,
-                        left: 0,
-                        backgroundColor: '#966CA5', 
-                        alignItems: 'center', 
-                        justifyContent: 'flex-end',
-                    },
-                    style
-                ]}
-
-
-            >
+                        { 
+                            width: '100%', 
+                            top: 0,
+                            left: 0,
+                            backgroundColor: '#966CA5', 
+                            alignItems: 'center', 
+                            justifyContent: 'flex-end',
+                        },
+                        style
+                    ]}
+                >
+                    
                 <Text style={{ color: 'white', fontSize: 22, marginBottom: 13}}>
-                    Добро пожаловать!
+                  Добро пожаловать!
                 </Text>
 
-                {/* <TouchableOpacity style={{
-                    position: 'absolute',
-                    right: 5,
-                    bottom: 0,
-                    padding: 10,
-                }}>
-                    <Text>
-                        Войти..
-                    </Text>
-                </TouchableOpacity> */}
             </Animated.View>
         </PanGestureHandler>
 
@@ -222,9 +192,7 @@ export const HomePage = () => {
 
                 <Text style={{fontSize: 22, color: 'white', fontWeight: 'bold'}}>
                     Open 
-                </Text>
-                
-
+                </Text>              
             </AnimatedTouchable>
 
             <AnimatedTouchable 
@@ -234,12 +202,10 @@ export const HomePage = () => {
                         0,
                         SPRING_CONFIG
                     )
-
                     marginsphere.value = withSpring(
                         -300, 
                         SPRING_CONFIG
                     )
-
                     angle.value = withTiming(0,{duration: 2000})
                 }}
 
@@ -263,7 +229,6 @@ export const HomePage = () => {
                 ]}>
                     Close
                 </Text>
-            
             </AnimatedTouchable>
 
 
@@ -278,9 +243,9 @@ export const HomePage = () => {
 
                     },
                     mainspherestyle,
-
                 ]}
             >
+                    
                 <Animated.View 
                     style={[
                         {   
@@ -359,8 +324,6 @@ export const HomePage = () => {
                         />
                     
                 </Animated.View>
-
-                
 
            </Animated.View>
     
